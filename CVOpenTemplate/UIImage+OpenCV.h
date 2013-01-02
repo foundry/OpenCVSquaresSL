@@ -1,9 +1,9 @@
 //
-//  CVAppDelegate.h
-//  CVOpenTemplate
+//  UIImage+OpenCV.h
+//  OpenCVClient
 //
-//  Created by foundry on 02/01/2013.
-//  Copyright (c) 2013 foundry. All rights reserved.
+//  Created by Robin Summerhill on 02/09/2011.
+//  Copyright 2011 Aptogo Limited. All rights reserved.
 //
 //  Permission is given to use this source code file without charge in any
 //  project, commercial or otherwise, entirely at your risk, with the condition
@@ -14,8 +14,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CVAppDelegate : UIResponder <UIApplicationDelegate>
+@interface UIImage (UIImage_OpenCV)
 
-@property (strong, nonatomic) UIWindow *window;
+    //cv::Mat to UIImage
++ (UIImage *)imageWithCVMat:(const cv::Mat&)cvMat;
+- (id)initWithCVMat:(const cv::Mat&)cvMat;
+
+
+    //UIImage to cv::Mat
+- (cv::Mat)CVMat;
+- (cv::Mat)CVGrayscaleMat;
+
 
 @end

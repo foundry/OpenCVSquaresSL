@@ -26,6 +26,12 @@
 		AB3B42901694B72D00A78685 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B428F1694B72D00A78685 /* AVFoundation.framework */; };
 		AB3B42921694B73400A78685 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B42911694B73400A78685 /* ImageIO.framework */; };
 		AB3B42951694B7B600A78685 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42941694B7B600A78685 /* CVWrapper.mm */; };
+		AB3B42A41694B9B400A78685 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */; };
+		AB3B42A51694BA7F00A78685 /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3B429F1694B92900A78685 /* CVSquares.cpp */; };
+		AB3B42A71694BA9500A78685 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42A61694BA9500A78685 /* README.markdown */; };
+		AB3B42AC1694BE0B00A78685 /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42A91694BE0B00A78685 /* testimage.jpg */; };
+		AB3B42AD1694BE0B00A78685 /* testimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AA1694BE0B00A78685 /* testimage2.jpg */; };
+		AB3B42AE1694BE0B00A78685 /* testimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AB1694BE0B00A78685 /* testimage3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,14 @@
 		AB3B42911694B73400A78685 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		AB3B42931694B7B600A78685 /* CVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
 		AB3B42941694B7B600A78685 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
+		AB3B429E1694B92900A78685 /* CVSquares.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSquares.h; sourceTree = "<group>"; };
+		AB3B429F1694B92900A78685 /* CVSquares.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CVSquares.cpp; sourceTree = "<group>"; };
+		AB3B42A21694B9B400A78685 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		AB3B42A61694BA9500A78685 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		AB3B42A91694BE0B00A78685 /* testimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage.jpg; sourceTree = "<group>"; };
+		AB3B42AA1694BE0B00A78685 /* testimage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage2.jpg; sourceTree = "<group>"; };
+		AB3B42AB1694BE0B00A78685 /* testimage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +93,7 @@
 		AB3B424E1694B64A00A78685 = {
 			isa = PBXGroup;
 			children = (
-				AB3B42911694B73400A78685 /* ImageIO.framework */,
-				AB3B428F1694B72D00A78685 /* AVFoundation.framework */,
-				AB3B428D1694B72400A78685 /* CoreVideo.framework */,
-				AB3B428B1694B71C00A78685 /* CoreMedia.framework */,
-				AB3B42851694B6D900A78685 /* libz.dylib */,
+				AB3B42A61694BA9500A78685 /* README.markdown */,
 				AB3B42631694B64A00A78685 /* CVOpenTemplate */,
 				AB3B425C1694B64A00A78685 /* Frameworks */,
 				AB3B425A1694B64A00A78685 /* Products */,
@@ -101,6 +111,11 @@
 		AB3B425C1694B64A00A78685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB3B42911694B73400A78685 /* ImageIO.framework */,
+				AB3B428F1694B72D00A78685 /* AVFoundation.framework */,
+				AB3B428D1694B72400A78685 /* CoreVideo.framework */,
+				AB3B428B1694B71C00A78685 /* CoreMedia.framework */,
+				AB3B42851694B6D900A78685 /* libz.dylib */,
 				AB3B42831694B6C500A78685 /* opencv2.framework */,
 				AB3B425D1694B64A00A78685 /* UIKit.framework */,
 				AB3B425F1694B64A00A78685 /* Foundation.framework */,
@@ -112,6 +127,7 @@
 		AB3B42631694B64A00A78685 /* CVOpenTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				AB3B42A81694BDFC00A78685 /* images */,
 				AB3B426C1694B64B00A78685 /* CVAppDelegate.h */,
 				AB3B426D1694B64B00A78685 /* CVAppDelegate.m */,
 				AB3B42751694B64B00A78685 /* MainStoryboard_iPhone.storyboard */,
@@ -120,6 +136,10 @@
 				AB3B427C1694B64B00A78685 /* CVViewController.m */,
 				AB3B42931694B7B600A78685 /* CVWrapper.h */,
 				AB3B42941694B7B600A78685 /* CVWrapper.mm */,
+				AB3B429E1694B92900A78685 /* CVSquares.h */,
+				AB3B429F1694B92900A78685 /* CVSquares.cpp */,
+				AB3B42A21694B9B400A78685 /* UIImage+OpenCV.h */,
+				AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */,
 				AB3B42641694B64B00A78685 /* Supporting Files */,
 			);
 			path = CVOpenTemplate;
@@ -137,6 +157,16 @@
 				AB3B42731694B64B00A78685 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB3B42A81694BDFC00A78685 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AB3B42A91694BE0B00A78685 /* testimage.jpg */,
+				AB3B42AA1694BE0B00A78685 /* testimage2.jpg */,
+				AB3B42AB1694BE0B00A78685 /* testimage3.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +227,10 @@
 				AB3B42741694B64B00A78685 /* Default-568h@2x.png in Resources */,
 				AB3B42771694B64B00A78685 /* MainStoryboard_iPhone.storyboard in Resources */,
 				AB3B427A1694B64B00A78685 /* MainStoryboard_iPad.storyboard in Resources */,
+				AB3B42A71694BA9500A78685 /* README.markdown in Resources */,
+				AB3B42AC1694BE0B00A78685 /* testimage.jpg in Resources */,
+				AB3B42AD1694BE0B00A78685 /* testimage2.jpg in Resources */,
+				AB3B42AE1694BE0B00A78685 /* testimage3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +245,8 @@
 				AB3B426E1694B64B00A78685 /* CVAppDelegate.m in Sources */,
 				AB3B427D1694B64B00A78685 /* CVViewController.m in Sources */,
 				AB3B42951694B7B600A78685 /* CVWrapper.mm in Sources */,
+				AB3B42A41694B9B400A78685 /* UIImage+OpenCV.mm in Sources */,
+				AB3B42A51694BA7F00A78685 /* CVSquares.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +302,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -288,7 +324,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,6 +381,7 @@
 				AB3B42821694B64B00A78685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
