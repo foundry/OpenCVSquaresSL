@@ -1,7 +1,7 @@
 Computer vision with iOS: integrating openCV and C++ with objective-C
 ------------------------------------------------------
 2/2/2012
-openCV library compiled from latest gitHub clone (2.4.9)
+openCV library compiled from latest gitHub clone 
 
 UIImage+OpenCV category code from   
 <http://aptogo.co.uk/2011/09/opencv-framework-for-ios/>
@@ -9,7 +9,7 @@ UIImage+OpenCV category code from
            
 ------------------------------------------------------
 
-This is a sample application using openCV   . It adapts the "squares.cpp" sample code included with the openCV distribution.
+This is a sample application using openCV. It adapts the "squares.cpp" sample code included with the openCV distribution.
 <https://github.com/Itseez/opencv/blob/master/samples/cpp/squares.cpp>
 
 Prompted from a question on stack overflow:
@@ -52,21 +52,5 @@ This replaces the work of  `main{}` in the original file.
 	
 __UIImage+OpenCV__
     
-This UIImage category is an objC++  file containing the code to convert between UIImage and cv::Mat image formats. This is where you move your two methods `-(UIImage *)UIImageFromCVMat:(cv::Mat)cvMat` and `- (cv::Mat)cvMatWithImage:(UIImage *)image
-`  
-
-    //UIImage+OpenCV.h
-    
-	#import <UIKit/UIKit.h>
-
-	@interface UIImage (UIImage_OpenCV)
-
-		//cv::Mat to UIImage
-	+ (UIImage *)imageFromCVMat:(cv::Mat&)cvMat;
-
-		//UIImage to cv::Mat
-	- (cv::Mat)CVMat;
-
-
-	@end		
+This UIImage category is an objC++  file containing the code to convert between UIImage and cv::Mat image formats. 
 
