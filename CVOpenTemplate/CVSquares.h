@@ -2,7 +2,7 @@
 //  CVSquares.h
 //  OpenCVClient
 //
-//  Created by foundry on 30/12/2012.
+//  Created by Washe on 30/12/2012.
 //  Copyright (c) new foundry ltd. All rights reserved.
 //
 //  Permission is given to use this source code file without charge in any
