@@ -1,26 +1,21 @@
-Computer vision with iOS: integrating openCV and C++ with objective-C
-------------------------------------------------------
-2/2/2012
+__OpenCV computer vision with iOS__  
+
+2/2/2013
 openCV library compiled from latest gitHub clone 
 
 UIImage+OpenCV category code from   
 <http://aptogo.co.uk/2011/09/opencv-framework-for-ios/>
 
-           
-------------------------------------------------------
 
-This is a sample application using openCV. It adapts the "squares.cpp" sample code included with the openCV distribution.
+__integrating openCV and C++ with objective-C__
+           
+
+This is a sample application using openCV in iOS. It adapts the "squares.cpp" sample code included with the openCV distribution.
 <https://github.com/Itseez/opencv/blob/master/samples/cpp/squares.cpp>
 
 Prompted from a question on stack overflow:
 
 <http://stackoverflow.com/questions/13958321/iosretrieve-rectangle-shaped-image-from-the-background-image?lq=1>
-
-Taking a c++ file with main{} and no class declarations...
-
-
-- remove main loop
-- any functions called from main{} go into header file
 
 =======================
 
