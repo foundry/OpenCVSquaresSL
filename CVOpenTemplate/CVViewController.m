@@ -25,39 +25,39 @@
 
 
 - (IBAction)toleranceChanged:(UISlider*)sender {
-    NSLog (@"sender %@",sender);
-    [self setSpinnerLocation:(UISlider*)sender];
+        // NSLog (@"sender %@",sender);
+        //[self setSpinnerLocation:(UISlider*)sender];
     [self modifyImage];
 }
 
 
 - (IBAction)toleranceTouchDragInside:(id)sender {
-    NSLog (@"sliderTouchDragInside");
-    NSLog (@"sender %@",sender);
+        //NSLog (@"sliderTouchDragInside");
+        // NSLog (@"sender %@",sender);
     [self adjustTolerance];
 }
 
 
 - (IBAction)levelsChanged:(UISlider*)sender {
-    NSLog (@"levelsChanged %.1f", sender.value);
-    [self setSpinnerLocation:(UISlider*)sender];
+        //NSLog (@"levelsChanged %.1f", sender.value);
+        //[self setSpinnerLocation:(UISlider*)sender];
     [self modifyImage];
 }
 
 - (IBAction)levelsTouchDragInside:(id)sender {
-    NSLog (@"levelsTouchDragInside");
+        //NSLog (@"levelsTouchDragInside");
     [self adjustLevels];
     
 }
 
 - (IBAction)thresholdChanged:(UISlider*)sender {
-    NSLog (@"thresholdChanged %.1f", sender.value);
-    [self setSpinnerLocation:(UISlider*)sender];
+        //NSLog (@"thresholdChanged %.1f", sender.value);
+        //[self setSpinnerLocation:(UISlider*)sender];
     [self modifyImage];
 }
 
 - (IBAction)thresholdTouchDragInside:(id)sender {
-    NSLog (@"thresholdTouchDragInside");
+        //NSLog (@"thresholdTouchDragInside");
     [self adjustThreshold];
 }
 
@@ -107,7 +107,7 @@
 
 - (void) modifyImage
 {
-    NSLog (@"modifyImage");
+        //NSLog (@"modifyImage");
     [self.spinner startAnimating];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -150,6 +150,11 @@
 
 }
 
+- (void) toggleControlsView:(NSTimer*)theTimer
+{
+    [self toggleControlsView];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -165,7 +170,12 @@
 {
     [super viewDidAppear:animated];
     [self forOpenCV];
-    [self toggleControlsView];
+    NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:0.5
+                                             target:self
+                                           selector:@selector(toggleControlsView:)
+                                           userInfo:nil
+                                            repeats:NO];
+        //[self toggleControlsView];
 }
 
 
@@ -180,5 +190,10 @@
 
         self.imageView.image = image;
     }
+}
+
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 @end

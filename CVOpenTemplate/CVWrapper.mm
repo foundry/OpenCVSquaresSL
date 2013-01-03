@@ -39,7 +39,7 @@
                           threshold:(NSInteger)threshold
                              levels:(NSInteger)levels
 {
-    NSLog (@"detectedSquaresInImage");
+        //NSLog (@"detectedSquaresInImage");
     UIImage* result = nil;
     cv::Mat matImage = [image CVMat];
     
@@ -48,7 +48,7 @@
        
     
     result = [UIImage imageWithCVMat:matImage];
-    NSLog (@"detectedSquaresInImage result");
+        //NSLog (@"detectedSquaresInImage result");
     
     return result;
     

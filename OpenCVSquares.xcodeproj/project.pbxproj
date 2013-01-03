@@ -35,14 +35,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB3B42591694B64A00A78685 /* CVOpenTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVOpenTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3B42591694B64A00A78685 /* OpenCVSquares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVSquares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3B425D1694B64A00A78685 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AB3B425F1694B64A00A78685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB3B42611694B64A00A78685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AB3B42651694B64B00A78685 /* CVOpenTemplate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CVOpenTemplate-Info.plist"; sourceTree = "<group>"; };
+		AB3B42651694B64B00A78685 /* OpenCVSquares-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenCVSquares-Info.plist"; sourceTree = "<group>"; };
 		AB3B42671694B64B00A78685 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB3B42691694B64B00A78685 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AB3B426B1694B64B00A78685 /* CVOpenTemplate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CVOpenTemplate-Prefix.pch"; sourceTree = "<group>"; };
+		AB3B426B1694B64B00A78685 /* OpenCVSquares-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCVSquares-Prefix.pch"; sourceTree = "<group>"; };
 		AB3B426C1694B64B00A78685 /* CVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVAppDelegate.h; sourceTree = "<group>"; };
 		AB3B426D1694B64B00A78685 /* CVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVAppDelegate.m; sourceTree = "<group>"; };
 		AB3B426F1694B64B00A78685 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		AB3B425A1694B64A00A78685 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB3B42591694B64A00A78685 /* CVOpenTemplate.app */,
+				AB3B42591694B64A00A78685 /* OpenCVSquares.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,10 +148,10 @@
 		AB3B42641694B64B00A78685 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AB3B42651694B64B00A78685 /* CVOpenTemplate-Info.plist */,
+				AB3B42651694B64B00A78685 /* OpenCVSquares-Info.plist */,
 				AB3B42661694B64B00A78685 /* InfoPlist.strings */,
 				AB3B42691694B64B00A78685 /* main.m */,
-				AB3B426B1694B64B00A78685 /* CVOpenTemplate-Prefix.pch */,
+				AB3B426B1694B64B00A78685 /* OpenCVSquares-Prefix.pch */,
 				AB3B426F1694B64B00A78685 /* Default.png */,
 				AB3B42711694B64B00A78685 /* Default@2x.png */,
 				AB3B42731694B64B00A78685 /* Default-568h@2x.png */,
@@ -172,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB3B42581694B64A00A78685 /* CVOpenTemplate */ = {
+		AB3B42581694B64A00A78685 /* OpenCVSquares */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB3B42801694B64B00A78685 /* Build configuration list for PBXNativeTarget "CVOpenTemplate" */;
+			buildConfigurationList = AB3B42801694B64B00A78685 /* Build configuration list for PBXNativeTarget "OpenCVSquares" */;
 			buildPhases = (
 				AB3B42551694B64A00A78685 /* Sources */,
 				AB3B42561694B64A00A78685 /* Frameworks */,
@@ -184,9 +184,9 @@
 			);
 			dependencies = (
 			);
-			name = CVOpenTemplate;
+			name = OpenCVSquares;
 			productName = CVOpenTemplate;
-			productReference = AB3B42591694B64A00A78685 /* CVOpenTemplate.app */;
+			productReference = AB3B42591694B64A00A78685 /* OpenCVSquares.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = foundry;
 			};
-			buildConfigurationList = AB3B42531694B64A00A78685 /* Build configuration list for PBXProject "CVOpenTemplate" */;
+			buildConfigurationList = AB3B42531694B64A00A78685 /* Build configuration list for PBXProject "OpenCVSquares" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -211,7 +211,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB3B42581694B64A00A78685 /* CVOpenTemplate */,
+				AB3B42581694B64A00A78685 /* OpenCVSquares */,
 			);
 		};
 /* End PBXProject section */
@@ -340,9 +340,9 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CVOpenTemplate/CVOpenTemplate-Prefix.pch";
-				INFOPLIST_FILE = "CVOpenTemplate/CVOpenTemplate-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CVOpenTemplate/OpenCVSquares-Prefix.pch";
+				INFOPLIST_FILE = "CVOpenTemplate/OpenCVSquares-Info.plist";
+				PRODUCT_NAME = OpenCVSquares;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -355,9 +355,9 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CVOpenTemplate/CVOpenTemplate-Prefix.pch";
-				INFOPLIST_FILE = "CVOpenTemplate/CVOpenTemplate-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CVOpenTemplate/OpenCVSquares-Prefix.pch";
+				INFOPLIST_FILE = "CVOpenTemplate/OpenCVSquares-Info.plist";
+				PRODUCT_NAME = OpenCVSquares;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -365,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB3B42531694B64A00A78685 /* Build configuration list for PBXProject "CVOpenTemplate" */ = {
+		AB3B42531694B64A00A78685 /* Build configuration list for PBXProject "OpenCVSquares" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB3B427E1694B64B00A78685 /* Debug */,
@@ -374,7 +374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB3B42801694B64B00A78685 /* Build configuration list for PBXNativeTarget "CVOpenTemplate" */ = {
+		AB3B42801694B64B00A78685 /* Build configuration list for PBXNativeTarget "OpenCVSquares" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB3B42811694B64B00A78685 /* Debug */,
