@@ -1,10 +1,12 @@
 __OpenCV computer vision with iOS__  
 
-2/2/2013
+2/1/2013
 openCV library compiled from latest gitHub clone 
 
 UIImage+OpenCV category code from   
 <http://aptogo.co.uk/2011/09/opencv-framework-for-ios/>
+
+Requirements: OSX10.7+ XCode4.4+ iOS5.0+
 
 
 __integrating openCV and C++ with objective-C__
