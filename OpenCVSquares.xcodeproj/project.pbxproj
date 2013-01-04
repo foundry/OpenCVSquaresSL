@@ -20,11 +20,6 @@
 		AB3B427A1694B64B00A78685 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42781694B64B00A78685 /* MainStoryboard_iPad.storyboard */; };
 		AB3B427D1694B64B00A78685 /* CVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B427C1694B64B00A78685 /* CVViewController.m */; };
 		AB3B42841694B6C500A78685 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B42831694B6C500A78685 /* opencv2.framework */; };
-		AB3B42861694B6D900A78685 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B42851694B6D900A78685 /* libz.dylib */; };
-		AB3B428C1694B71C00A78685 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B428B1694B71C00A78685 /* CoreMedia.framework */; };
-		AB3B428E1694B72400A78685 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B428D1694B72400A78685 /* CoreVideo.framework */; };
-		AB3B42901694B72D00A78685 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B428F1694B72D00A78685 /* AVFoundation.framework */; };
-		AB3B42921694B73400A78685 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B42911694B73400A78685 /* ImageIO.framework */; };
 		AB3B42951694B7B600A78685 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42941694B7B600A78685 /* CVWrapper.mm */; };
 		AB3B42A41694B9B400A78685 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */; };
 		AB3B42A51694BA7F00A78685 /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3B429F1694B92900A78685 /* CVSquares.cpp */; };
@@ -75,15 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3B42901694B72D00A78685 /* AVFoundation.framework in Frameworks */,
-				AB3B428E1694B72400A78685 /* CoreVideo.framework in Frameworks */,
-				AB3B428C1694B71C00A78685 /* CoreMedia.framework in Frameworks */,
-				AB3B42921694B73400A78685 /* ImageIO.framework in Frameworks */,
 				AB3B425E1694B64A00A78685 /* UIKit.framework in Frameworks */,
 				AB3B42601694B64A00A78685 /* Foundation.framework in Frameworks */,
 				AB3B42621694B64A00A78685 /* CoreGraphics.framework in Frameworks */,
 				AB3B42841694B6C500A78685 /* opencv2.framework in Frameworks */,
-				AB3B42861694B6D900A78685 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
