@@ -13,14 +13,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CVImagePickerSegmentedControl.h"
 
-@interface CVViewController : UIViewController
-<UINavigationControllerDelegate,
-UIScrollViewDelegate,
-UIImagePickerControllerDelegate,
-CVImagePickerSegmentedControlDelegate,
-UIPopoverControllerDelegate>
+@interface CVViewController : UIViewController <UIScrollViewDelegate>
 
 
     //views
@@ -52,7 +46,5 @@ UIPopoverControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *thresholdLabel;
 - (IBAction)thresholdChanged:(id)sender;
 - (IBAction)thresholdTouchDragInside:(id)sender;
-
-
 
 @end

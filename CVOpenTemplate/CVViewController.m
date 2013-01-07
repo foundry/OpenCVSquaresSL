@@ -1,29 +1,32 @@
-//
-//  CVViewController.m
-//  CVOpenTemplate
-//
-//  Created by Washe on 02/01/2013.
-//  Copyright (c) 2013 Washe / Foundry. All rights reserved.
-//
-//  Permission is given to use this source code file without charge in any
-//  project, commercial or otherwise, entirely at your risk, with the condition
-//  that any redistribution (in part or whole) of source code must retain
-//  this copyright and permission notice. Attribution in compiled projects is
-//  appreciated but not required.
-//
+    //
+    //  CVViewController.m
+    //  CVOpenTemplate
+    //
+    //  Created by Washe on 02/01/2013.
+    //  Copyright (c) 2013 Washe / Foundry. All rights reserved.
+    //
+    //  Permission is given to use this source code file without charge in any
+    //  project, commercial or otherwise, entirely at your risk, with the condition
+    //  that any redistribution (in part or whole) of source code must retain
+    //  this copyright and permission notice. Attribution in compiled projects is
+    //  appreciated but not required.
+    //
 
 #import "CVViewController.h"
 #import "CVWrapper.h"
-#import "CVImagePickerSegmentedControl.h"
     //#import "CVImagePickerControl.h"
 
-@interface CVViewController ()
+@interface CVViewController () 
 @property (nonatomic, strong) UIImage* image;
 - (void) modifyImage;
 - (void) adjustTolerance;
 - (void) adjustLevels;
 - (void) adjustThreshold;
 - (void) toggleControlsView;
+- (BOOL) controlsAreVisible;
+- (void) layoutScrollView;
+- (void) layoutControls;
+- (void) centerScrollViewContents;
 @end
 
 @implementation CVViewController
@@ -63,46 +66,32 @@
 #pragma mark - slider actions
 
 - (IBAction)toleranceChanged:(UISlider*)sender {
-        // NSLog (@"sender %@",sender);
-        //[self setSpinnerLocation:(UISlider*)sender];
     [self modifyImage];
 }
 
-
 - (IBAction)toleranceTouchDragInside:(id)sender {
-        //NSLog (@"sliderTouchDragInside");
-        // NSLog (@"sender %@",sender);
     [self adjustTolerance];
 }
 
-
 - (IBAction)levelsChanged:(UISlider*)sender {
-        //NSLog (@"levelsChanged %.1f", sender.value);
-        //[self setSpinnerLocation:(UISlider*)sender];
     [self modifyImage];
 }
 
 - (IBAction)levelsTouchDragInside:(id)sender {
-        //NSLog (@"levelsTouchDragInside");
     [self adjustLevels];
-    
 }
 
 - (IBAction)thresholdChanged:(UISlider*)sender {
-        //NSLog (@"thresholdChanged %.1f", sender.value);
-        //[self setSpinnerLocation:(UISlider*)sender];
     [self modifyImage];
 }
 
 - (IBAction)thresholdTouchDragInside:(id)sender {
-        //NSLog (@"thresholdTouchDragInside");
     [self adjustThreshold];
 }
 
 - (void) adjustTolerance
 {
     self.tolerance = sinf([self toleranceSlider].value*M_PI/180);
-        //self.toleranceLabel.text = [NSString stringWithFormat:@"%.1f", self.tolerance];
     self.toleranceLabel.text = [NSString stringWithFormat:@"%.0f", self.toleranceSlider.value];
 }
 
@@ -132,7 +121,6 @@
     
     + slider.frame.origin.x
     + SLIDER_PADDING;
-        // CGFloat centerX = (originX - self.spinner.bounds.size.width/2);
     CGFloat centerX = originX;
     
     CGFloat centerY = slider.center.y;
@@ -144,27 +132,25 @@
 - (void) modifyImage
 {
     METHOD_LOG_CLASS;
-        //[self logLayout];
     [self.spinner startAnimating];
 #ifndef VERSION_SL
-        // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-#endif        
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+#endif
         UIImage* myImage =
         [CVWrapper detectedSquaresInImage:self.image
-                                       tolerance:self.tolerance
-                                       threshold:self.threshold
-                                          levels:self.levels];
+                                tolerance:self.tolerance
+                                threshold:self.threshold
+                                   levels:self.levels];
 #ifndef VERSION_SL
-        // dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
 #endif
             self.imageView.image = myImage;
             [self.spinner stopAnimating];
 #ifndef VERSION_SL
-        //   });
-        // });
+        });
+    });
 #endif
-        // [self logLayout];
-
+    
 }
 
 
@@ -176,7 +162,7 @@
     if (!CGRectContainsPoint(self.controlsView.frame
                              , tapLocationInSelfView)) {
         [self toggleControlsView];
-           }
+    }
 }
 
 - (void) toggleControlsView
@@ -192,12 +178,12 @@
     CGPoint center = CGPointZero;
     if ([self controlsAreVisible]) {
         center = CGPointMake(self.view.bounds.size.width/2
-        ,self.view.bounds.size.height + self.controlsView.bounds.size.height/2);
+                             ,self.view.bounds.size.height + self.controlsView.bounds.size.height/2);
     } else {
         center = CGPointMake (self.view.bounds.size.width/2
-        ,self.view.bounds.size.height - self.controlsView.bounds.size.height/2);
+                              ,self.view.bounds.size.height - self.controlsView.bounds.size.height/2);
     }
-   
+    
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.25];
     [UIView setAnimationDelay:0.0];
@@ -212,67 +198,43 @@
 }
 
 
-
-
 #pragma mark - setup and takedown
 
 - (void) viewDidLoad
 {
     METHOD_LOG_CLASS;
-
+    
     [super viewDidLoad];
-    UITapGestureRecognizer* tapGR = 
-    [[UITapGestureRecognizer alloc] initWithTarget:self 
+    UITapGestureRecognizer* tapGR =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
                                             action:@selector(imageTapped:)];
     [self.view addGestureRecognizer:tapGR];
     
-    UILongPressGestureRecognizer* longGR =
-    [[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                  action:@selector(longTap:)];
-    [self.view addGestureRecognizer:longGR];
-    
-    CVImagePickerSegmentedControl* pictureControl =
-    [[CVImagePickerSegmentedControl alloc] init];
-    [pictureControl setDelegate:self];
-    [self.controlsView addSubview:pictureControl];
-    self.image = [UIImage imageNamed:@"testimage3.png"];
-
-        // ...
+    self.image = [UIImage imageNamed:@"testimage3.jpg"];
 }
 
-- (void) longTap:(UITapGestureRecognizer*)sender {
-    NSLog(@"longTap");
-    [self logLayout];
-}
 
 
 - (void)viewWillAppear:(BOOL)animated
 {
     METHOD_LOG_CLASS;
-
     [super viewWillAppear:animated];
-
-        //self.image = nil;
-        //NSLog (@"self.image %@",self.image);
+    
     self.imageView.image = self.image;
-        //NSLog (@"self.imageView.image %@",self.imageView.image);
-
+    
     self.imageView.bounds =
     CGRectMake(0,0,self.image.size.width,self.image.size.height);
-     [self layoutScrollView];
-     [self layoutControls];
+    [self layoutScrollView];
+    [self layoutControls];
     [self adjustThreshold];
     [self adjustTolerance];
     [self adjustLevels];
-
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     METHOD_LOG_CLASS;
-        //[self layoutScrollView];
-        // [self layoutControls];
-    
     [super viewDidAppear:animated];
     [self modifyImage];
     [NSTimer scheduledTimerWithTimeInterval:0.5
@@ -285,7 +247,7 @@
 - (void) layoutScrollView
 {
     METHOD_LOG_CLASS;
-
+    
     [self.scrollView setFrame:self.view.bounds];
     self.scrollView.contentSize = self.imageView.bounds.size;
     CGFloat zoomScale;
@@ -306,12 +268,7 @@
 
 - (void) layoutControls
 {
-    METHOD_LOG_CLASS;
-
-    UIView* pictureControl = [[self.controlsView subviews] lastObject];
-    pictureControl.bounds =
-    CGRectMake(0,0,self.controlsView.bounds.size.width - 24,24);
-    pictureControl.center = CGPointMake(self.controlsView.bounds.size.width/2, 24);
+    return;
 }
 
 - (BOOL) controlsAreVisible
@@ -333,19 +290,14 @@
     CGRect  contentsBounds = self.imageView.bounds;
     CGPoint contentsCenter = self.imageView.center;
     CGFloat      zoomScale = self.scrollView.zoomScale;
-    NSLog (@"self.imageView.bounds %@",NSStringFromCGRect(contentsBounds));
-    NSLog (@"self.scrollView.zoomscale %.1f",self.scrollView.zoomScale);
     if (contentsBounds.size.width*zoomScale < scrollSize.width) {
         contentsCenter.x = scrollCenter.x;
     }
     if (contentsBounds.size.height*zoomScale < scrollSize.height) {
         contentsCenter.y = scrollCenter.y;
     }
-    NSLog (@"contentsCenter %@",NSStringFromCGPoint(contentsCenter));
     self.imageView.center = contentsCenter;
 }
-
-
 
 
 - (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -356,13 +308,13 @@
 }
 
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-        //don't rotate for iphone, camera screws up;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) 
-        return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
-    else return YES;
-}
+//- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+//{
+//        //don't rotate for iphone, camera screws up;
+//        //if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+//        return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+//        //else return YES;
+//}
 
 
 #pragma mark - scroll view delegate
@@ -376,56 +328,6 @@
 {
     [self centerScrollViewContents];
 }
-
-
-
-#pragma mark - CVImagePickerSegmentedController delegate
-- (void) imagePickerImage:(UIImage*)image
-{
-    METHOD_LOG_CLASS;
-    self.image = image;
-    NSLog (@"self.image %@",self.image);
-    self.imageView.image = image;
-    NSLog (@"self.imageView.image %@",self.imageView.image);
-
-        //[self modifyImage];
-}
-
-
-
-#pragma mark - logging
-
-- (void) logLayout
-{
-    METHOD_LOG_CLASS;
-    NSLog (@"image %@",self.image);
-    NSLog (@"imageView image %@",self.imageView.image);
-
-    NSLog (@"view frame %@",NSStringFromCGRect(self.view.frame));
-    NSLog (@"view bounds %@",NSStringFromCGRect(self.view.bounds));
-    NSLog (@"view center %@",NSStringFromCGPoint(self.view.center));
-    NSLog (@"scrollview frame %@",NSStringFromCGRect(self.scrollView.frame));
-    NSLog (@"scrollView contentOffset %@",NSStringFromCGPoint(self.scrollView.contentOffset));
-    NSLog (@"self.imageView.bounds.size %@",NSStringFromCGSize(self.imageView.bounds.size));
-    NSLog (@"self.image.size %@",NSStringFromCGSize(self.image.size));
-    NSLog (@"imageView  frame %@",NSStringFromCGRect(self.imageView.frame));
-    
-    UIView* pictureControl = [[self.controlsView subviews] lastObject];
-    NSLog (@"controlsView frame %@",NSStringFromCGRect(self.controlsView.frame));
-    NSLog (@"controlsView bounds %@",NSStringFromCGRect(self.controlsView.bounds));
-    NSLog (@"controlsView center %@",NSStringFromCGPoint(self.controlsView.center));
-    NSLog (@"pictureControl frame %@",NSStringFromCGRect(pictureControl.frame));
-    NSLog (@"pictureControl bounds %@",NSStringFromCGRect(pictureControl.bounds));
-    NSLog (@"pictureControl center %@",NSStringFromCGPoint(pictureControl.center));
-    if (CGRectIntersectsRect(self.controlsView.frame, self.view.bounds)) {
-        NSLog (@"controlsView visible");
-    } else {
-        NSLog (@"controlsView offscreen");
-    }
-}
-
-
-
 
 
 @end

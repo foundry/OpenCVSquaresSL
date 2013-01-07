@@ -1,3 +1,21 @@
+__OpenCVSquares Multitarget version__
+
+opencv2 framework - for Xcode 4.4+/OSX10.7
+
+OpenCV framework -  for XCode 4.2/OSX10.6
+
+Three targets  
+
+- OpenCV_SL - OpenCV framework + Xibs
+for Xcode 4.2 and Snow Leopard
+
+- OpenCVSquaresXIB - opencv2 framework + Xibs  
+For Xcode 4.4+ and OSX10.7+
+
+- OpenCVSquares - opencv2 framework + Storyboards  
+For Xcode 4.4+ and OSX10.7+
+
+
 __OpenCV computer vision with iOS__  
 
 2/1/2013

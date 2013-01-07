@@ -10,9 +10,6 @@
 		AB03A9C71699285900880878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42691694B64B00A78685 /* main.m */; };
 		AB03A9C81699285900880878 /* CVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B426D1694B64B00A78685 /* CVAppDelegate.m */; };
 		AB03A9C91699285900880878 /* CVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B427C1694B64B00A78685 /* CVViewController.m */; };
-		AB03A9CA1699285900880878 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42941694B7B600A78685 /* CVWrapper.mm */; };
-		AB03A9CB1699285900880878 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */; };
-		AB03A9CC1699285900880878 /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3B429F1694B92900A78685 /* CVSquares.cpp */; };
 		AB03A9CE1699285900880878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B425D1694B64A00A78685 /* UIKit.framework */; };
 		AB03A9CF1699285900880878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B425F1694B64A00A78685 /* Foundation.framework */; };
 		AB03A9D01699285900880878 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B42611694B64A00A78685 /* CoreGraphics.framework */; };
@@ -24,7 +21,6 @@
 		AB03A9DA1699285900880878 /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42A91694BE0B00A78685 /* testimage.jpg */; };
 		AB03A9DB1699285900880878 /* testimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AA1694BE0B00A78685 /* testimage2.jpg */; };
 		AB03A9DC1699285900880878 /* testimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AB1694BE0B00A78685 /* testimage3.jpg */; };
-		AB03A9E31699287C00880878 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4E5B501698C0DA00A153E3 /* OpenCV.framework */; };
 		AB03A9E8169929AD00880878 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B42851694B6D900A78685 /* libz.dylib */; };
 		AB03AA1E1699497300880878 /* CVViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC71B871698C39200F9A546 /* CVViewController_iPhone.xib */; };
 		AB03AA1F1699497A00880878 /* CVViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC71B871698C39200F9A546 /* CVViewController_iPhone.xib */; };
@@ -41,25 +37,14 @@
 		AB3B42771694B64B00A78685 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42751694B64B00A78685 /* MainStoryboard_iPhone.storyboard */; };
 		AB3B427A1694B64B00A78685 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42781694B64B00A78685 /* MainStoryboard_iPad.storyboard */; };
 		AB3B427D1694B64B00A78685 /* CVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B427C1694B64B00A78685 /* CVViewController.m */; };
-		AB3B42951694B7B600A78685 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42941694B7B600A78685 /* CVWrapper.mm */; };
-		AB3B42A41694B9B400A78685 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */; };
-		AB3B42A51694BA7F00A78685 /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3B429F1694B92900A78685 /* CVSquares.cpp */; };
 		AB3B42A71694BA9500A78685 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42A61694BA9500A78685 /* README.markdown */; };
 		AB3B42AC1694BE0B00A78685 /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42A91694BE0B00A78685 /* testimage.jpg */; };
 		AB3B42AD1694BE0B00A78685 /* testimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AA1694BE0B00A78685 /* testimage2.jpg */; };
 		AB3B42AE1694BE0B00A78685 /* testimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AB1694BE0B00A78685 /* testimage3.jpg */; };
-		AB45C58A169954EB002DAF1A /* CVViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB45C589169954EB002DAF1A /* CVViewController_iPad.xib */; };
-		AB45C58B169954EB002DAF1A /* CVViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB45C589169954EB002DAF1A /* CVViewController_iPad.xib */; };
-		AB72838B1699C979004473A6 /* CVImagePickerSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72838A1699C979004473A6 /* CVImagePickerSegmentedControl.m */; };
-		AB72838C1699C979004473A6 /* CVImagePickerSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72838A1699C979004473A6 /* CVImagePickerSegmentedControl.m */; };
-		AB72838D1699C979004473A6 /* CVImagePickerSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72838A1699C979004473A6 /* CVImagePickerSegmentedControl.m */; };
 		AB72839B169A18AB004473A6 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA5CDC91698C7C100B2A6AE /* opencv2.framework */; };
 		ABA5CE4F1698D96800B2A6AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42691694B64B00A78685 /* main.m */; };
 		ABA5CE501698D96800B2A6AE /* CVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B426D1694B64B00A78685 /* CVAppDelegate.m */; };
 		ABA5CE511698D96800B2A6AE /* CVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B427C1694B64B00A78685 /* CVViewController.m */; };
-		ABA5CE521698D96800B2A6AE /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42941694B7B600A78685 /* CVWrapper.mm */; };
-		ABA5CE531698D96800B2A6AE /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */; };
-		ABA5CE541698D96800B2A6AE /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3B429F1694B92900A78685 /* CVSquares.cpp */; };
 		ABA5CE561698D96800B2A6AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B425D1694B64A00A78685 /* UIKit.framework */; };
 		ABA5CE571698D96800B2A6AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B425F1694B64A00A78685 /* Foundation.framework */; };
 		ABA5CE581698D96800B2A6AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3B42611694B64A00A78685 /* CoreGraphics.framework */; };
@@ -72,11 +57,20 @@
 		ABA5CE621698D96800B2A6AE /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42A91694BE0B00A78685 /* testimage.jpg */; };
 		ABA5CE631698D96800B2A6AE /* testimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AA1694BE0B00A78685 /* testimage2.jpg */; };
 		ABA5CE641698D96800B2A6AE /* testimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AB1694BE0B00A78685 /* testimage3.jpg */; };
+		ABD7481E169B7B3200E1A877 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4E5B501698C0DA00A153E3 /* OpenCV.framework */; };
+		ABD74838169B81A400E1A877 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABD74837169B81A400E1A877 /* UIImage+OpenCV.mm */; };
+		ABD74839169B81A400E1A877 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABD74837169B81A400E1A877 /* UIImage+OpenCV.mm */; };
+		ABD7483A169B81A400E1A877 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABD74837169B81A400E1A877 /* UIImage+OpenCV.mm */; };
+		ABD7483F169B81BF00E1A877 /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABD7483B169B81BF00E1A877 /* CVSquares.cpp */; };
+		ABD74840169B81BF00E1A877 /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABD7483B169B81BF00E1A877 /* CVSquares.cpp */; };
+		ABD74841169B81BF00E1A877 /* CVSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABD7483B169B81BF00E1A877 /* CVSquares.cpp */; };
+		ABD74842169B81BF00E1A877 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABD7483E169B81BF00E1A877 /* CVWrapper.mm */; };
+		ABD74843169B81BF00E1A877 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABD7483E169B81BF00E1A877 /* CVWrapper.mm */; };
+		ABD74844169B81BF00E1A877 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABD7483E169B81BF00E1A877 /* CVWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB03A9E01699285900880878 /* OpenCVSquares_SL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVSquares_SL.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB03A9E21699285B00880878 /* OpenCVSquares_Xib copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OpenCVSquares_Xib copy-Info.plist"; path = "/Volumes/minijHome/Documents/xcode_mini/open_source_apps/getsy/OpenCVSquares/OpenCVSquares_Xib copy-Info.plist"; sourceTree = "<absolute>"; };
 		AB2E7DD9169B029600FCF538 /* testimage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testimage3.png; sourceTree = "<group>"; };
 		AB3B42591694B64A00A78685 /* OpenCVSquares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVSquares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3B425D1694B64A00A78685 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -100,25 +94,22 @@
 		AB3B428D1694B72400A78685 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		AB3B428F1694B72D00A78685 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AB3B42911694B73400A78685 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		AB3B42931694B7B600A78685 /* CVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
-		AB3B42941694B7B600A78685 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
-		AB3B429E1694B92900A78685 /* CVSquares.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSquares.h; sourceTree = "<group>"; };
-		AB3B429F1694B92900A78685 /* CVSquares.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CVSquares.cpp; sourceTree = "<group>"; };
-		AB3B42A21694B9B400A78685 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
-		AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
 		AB3B42A61694BA9500A78685 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		AB3B42A91694BE0B00A78685 /* testimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage.jpg; sourceTree = "<group>"; };
 		AB3B42AA1694BE0B00A78685 /* testimage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage2.jpg; sourceTree = "<group>"; };
 		AB3B42AB1694BE0B00A78685 /* testimage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage3.jpg; sourceTree = "<group>"; };
-		AB45C589169954EB002DAF1A /* CVViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVViewController_iPad.xib; sourceTree = "<group>"; };
 		AB4E5B501698C0DA00A153E3 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenCV.framework; sourceTree = "<group>"; };
-		AB7283891699C979004473A6 /* CVImagePickerSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVImagePickerSegmentedControl.h; sourceTree = "<group>"; };
-		AB72838A1699C979004473A6 /* CVImagePickerSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVImagePickerSegmentedControl.m; sourceTree = "<group>"; };
 		AB72838E1699EF64004473A6 /* JMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMConstants.h; sourceTree = "<group>"; };
 		ABA5CDC91698C7C100B2A6AE /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		ABA5CE681698D96800B2A6AE /* OpenCVSquaresXIB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVSquaresXIB.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABA5CE6A1698D96800B2A6AE /* OpenCVSquares copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OpenCVSquares copy-Info.plist"; path = "/Volumes/minijHome/Documents/xcode_mini/open_source_apps/getsy/OpenCVSquares/OpenCVSquares copy-Info.plist"; sourceTree = "<absolute>"; };
 		ABC71B871698C39200F9A546 /* CVViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVViewController_iPhone.xib; sourceTree = "<group>"; };
+		ABD74833169B801500E1A877 /* OpenCVSquaresSL-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenCVSquaresSL-Info.plist"; sourceTree = "<group>"; };
+		ABD74836169B81A400E1A877 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		ABD74837169B81A400E1A877 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		ABD7483B169B81BF00E1A877 /* CVSquares.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CVSquares.cpp; sourceTree = "<group>"; };
+		ABD7483C169B81BF00E1A877 /* CVSquares.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSquares.h; sourceTree = "<group>"; };
+		ABD7483D169B81BF00E1A877 /* CVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVWrapper.h; sourceTree = "<group>"; };
+		ABD7483E169B81BF00E1A877 /* CVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +119,9 @@
 			files = (
 				AB03A9E8169929AD00880878 /* libz.dylib in Frameworks */,
 				AB03A9CE1699285900880878 /* UIKit.framework in Frameworks */,
-				AB03A9E31699287C00880878 /* OpenCV.framework in Frameworks */,
 				AB03A9CF1699285900880878 /* Foundation.framework in Frameworks */,
 				AB03A9D01699285900880878 /* CoreGraphics.framework in Frameworks */,
+				ABD7481E169B7B3200E1A877 /* OpenCV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +150,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2E7DDD169B20BD00FCF538 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AB3B42751694B64B00A78685 /* MainStoryboard_iPhone.storyboard */,
+				AB3B42781694B64B00A78685 /* MainStoryboard_iPad.storyboard */,
+				ABC71B871698C39200F9A546 /* CVViewController_iPhone.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		AB3B424E1694B64A00A78685 = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +167,6 @@
 				AB3B42631694B64A00A78685 /* CVOpenTemplate */,
 				AB3B425C1694B64A00A78685 /* Frameworks */,
 				AB3B425A1694B64A00A78685 /* Products */,
-				ABA5CE6A1698D96800B2A6AE /* OpenCVSquares copy-Info.plist */,
-				AB03A9E21699285B00880878 /* OpenCVSquares_Xib copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,23 +200,13 @@
 		AB3B42631694B64A00A78685 /* CVOpenTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				ABD74835169B816000E1A877 /* OpenCV */,
+				AB2E7DDD169B20BD00FCF538 /* UI */,
 				AB3B42A81694BDFC00A78685 /* images */,
 				AB3B426C1694B64B00A78685 /* CVAppDelegate.h */,
 				AB3B426D1694B64B00A78685 /* CVAppDelegate.m */,
-				AB3B42751694B64B00A78685 /* MainStoryboard_iPhone.storyboard */,
-				AB3B42781694B64B00A78685 /* MainStoryboard_iPad.storyboard */,
-				ABC71B871698C39200F9A546 /* CVViewController_iPhone.xib */,
-				AB45C589169954EB002DAF1A /* CVViewController_iPad.xib */,
 				AB3B427B1694B64B00A78685 /* CVViewController.h */,
 				AB3B427C1694B64B00A78685 /* CVViewController.m */,
-				AB7283891699C979004473A6 /* CVImagePickerSegmentedControl.h */,
-				AB72838A1699C979004473A6 /* CVImagePickerSegmentedControl.m */,
-				AB3B42931694B7B600A78685 /* CVWrapper.h */,
-				AB3B42941694B7B600A78685 /* CVWrapper.mm */,
-				AB3B429E1694B92900A78685 /* CVSquares.h */,
-				AB3B429F1694B92900A78685 /* CVSquares.cpp */,
-				AB3B42A21694B9B400A78685 /* UIImage+OpenCV.h */,
-				AB3B42A31694B9B400A78685 /* UIImage+OpenCV.mm */,
 				AB3B42641694B64B00A78685 /* Supporting Files */,
 			);
 			path = CVOpenTemplate;
@@ -226,6 +215,7 @@
 		AB3B42641694B64B00A78685 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ABD74833169B801500E1A877 /* OpenCVSquaresSL-Info.plist */,
 				AB72838E1699EF64004473A6 /* JMConstants.h */,
 				AB3B426B1694B64B00A78685 /* OpenCVSquares-Prefix.pch */,
 				AB3B42651694B64B00A78685 /* OpenCVSquares-Info.plist */,
@@ -247,6 +237,19 @@
 				AB2E7DD9169B029600FCF538 /* testimage3.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		ABD74835169B816000E1A877 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				ABD7483B169B81BF00E1A877 /* CVSquares.cpp */,
+				ABD7483C169B81BF00E1A877 /* CVSquares.h */,
+				ABD7483D169B81BF00E1A877 /* CVWrapper.h */,
+				ABD7483E169B81BF00E1A877 /* CVWrapper.mm */,
+				ABD74836169B81A400E1A877 /* UIImage+OpenCV.h */,
+				ABD74837169B81A400E1A877 /* UIImage+OpenCV.mm */,
+			);
+			name = OpenCV;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +349,6 @@
 				AB03A9DA1699285900880878 /* testimage.jpg in Resources */,
 				AB03A9DB1699285900880878 /* testimage2.jpg in Resources */,
 				AB03A9DC1699285900880878 /* testimage3.jpg in Resources */,
-				AB45C58B169954EB002DAF1A /* CVViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +383,6 @@
 				ABA5CE621698D96800B2A6AE /* testimage.jpg in Resources */,
 				ABA5CE631698D96800B2A6AE /* testimage2.jpg in Resources */,
 				ABA5CE641698D96800B2A6AE /* testimage3.jpg in Resources */,
-				AB45C58A169954EB002DAF1A /* CVViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,10 +396,9 @@
 				AB03A9C71699285900880878 /* main.m in Sources */,
 				AB03A9C81699285900880878 /* CVAppDelegate.m in Sources */,
 				AB03A9C91699285900880878 /* CVViewController.m in Sources */,
-				AB03A9CA1699285900880878 /* CVWrapper.mm in Sources */,
-				AB03A9CB1699285900880878 /* UIImage+OpenCV.mm in Sources */,
-				AB03A9CC1699285900880878 /* CVSquares.cpp in Sources */,
-				AB72838D1699C979004473A6 /* CVImagePickerSegmentedControl.m in Sources */,
+				ABD7483A169B81A400E1A877 /* UIImage+OpenCV.mm in Sources */,
+				ABD74841169B81BF00E1A877 /* CVSquares.cpp in Sources */,
+				ABD74844169B81BF00E1A877 /* CVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +409,9 @@
 				AB3B426A1694B64B00A78685 /* main.m in Sources */,
 				AB3B426E1694B64B00A78685 /* CVAppDelegate.m in Sources */,
 				AB3B427D1694B64B00A78685 /* CVViewController.m in Sources */,
-				AB3B42951694B7B600A78685 /* CVWrapper.mm in Sources */,
-				AB3B42A41694B9B400A78685 /* UIImage+OpenCV.mm in Sources */,
-				AB3B42A51694BA7F00A78685 /* CVSquares.cpp in Sources */,
-				AB72838B1699C979004473A6 /* CVImagePickerSegmentedControl.m in Sources */,
+				ABD74838169B81A400E1A877 /* UIImage+OpenCV.mm in Sources */,
+				ABD7483F169B81BF00E1A877 /* CVSquares.cpp in Sources */,
+				ABD74842169B81BF00E1A877 /* CVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +422,9 @@
 				ABA5CE4F1698D96800B2A6AE /* main.m in Sources */,
 				ABA5CE501698D96800B2A6AE /* CVAppDelegate.m in Sources */,
 				ABA5CE511698D96800B2A6AE /* CVViewController.m in Sources */,
-				ABA5CE521698D96800B2A6AE /* CVWrapper.mm in Sources */,
-				ABA5CE531698D96800B2A6AE /* UIImage+OpenCV.mm in Sources */,
-				ABA5CE541698D96800B2A6AE /* CVSquares.cpp in Sources */,
-				AB72838C1699C979004473A6 /* CVImagePickerSegmentedControl.m in Sources */,
+				ABD74839169B81A400E1A877 /* UIImage+OpenCV.mm in Sources */,
+				ABD74840169B81BF00E1A877 /* CVSquares.cpp in Sources */,
+				ABD74843169B81BF00E1A877 /* CVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +471,8 @@
 				GCC_PREFIX_HEADER = "CVOpenTemplate/OpenCVSquares-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = NO;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "CVOpenTemplate/OpenCVSquaresSL-Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = (
@@ -499,7 +498,8 @@
 				GCC_PREFIX_HEADER = "CVOpenTemplate/OpenCVSquares-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = NO;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "CVOpenTemplate/OpenCVSquaresSL-Info.plist";
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = (
@@ -603,6 +603,8 @@
 		ABA5CE661698D96800B2A6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -620,6 +622,8 @@
 		ABA5CE671698D96800B2A6AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

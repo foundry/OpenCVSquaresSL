@@ -15,7 +15,6 @@
 #import "CVWrapper.h"
 #import "CVSquares.h"
 #import "UIImage+OpenCV.h"
-#import "CVImagePickerSegmentedControl.h"
 
     //remove 'magic numbers' from original C++ source so we can manipulate them from obj-C
 #define TOLERANCE 0.3
