@@ -41,6 +41,7 @@
 		AB3B42AC1694BE0B00A78685 /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42A91694BE0B00A78685 /* testimage.jpg */; };
 		AB3B42AD1694BE0B00A78685 /* testimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AA1694BE0B00A78685 /* testimage2.jpg */; };
 		AB3B42AE1694BE0B00A78685 /* testimage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB3B42AB1694BE0B00A78685 /* testimage3.jpg */; };
+		AB442EE5169B8FC80046799F /* OpenCVSquaresXIB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB442EE4169B8FC80046799F /* OpenCVSquaresXIB-Info.plist */; };
 		AB72839B169A18AB004473A6 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA5CDC91698C7C100B2A6AE /* opencv2.framework */; };
 		ABA5CE4F1698D96800B2A6AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B42691694B64B00A78685 /* main.m */; };
 		ABA5CE501698D96800B2A6AE /* CVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B426D1694B64B00A78685 /* CVAppDelegate.m */; };
@@ -98,6 +99,7 @@
 		AB3B42A91694BE0B00A78685 /* testimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage.jpg; sourceTree = "<group>"; };
 		AB3B42AA1694BE0B00A78685 /* testimage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage2.jpg; sourceTree = "<group>"; };
 		AB3B42AB1694BE0B00A78685 /* testimage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage3.jpg; sourceTree = "<group>"; };
+		AB442EE4169B8FC80046799F /* OpenCVSquaresXIB-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenCVSquaresXIB-Info.plist"; sourceTree = "<group>"; };
 		AB4E5B501698C0DA00A153E3 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenCV.framework; sourceTree = "<group>"; };
 		AB72838E1699EF64004473A6 /* JMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMConstants.h; sourceTree = "<group>"; };
 		ABA5CDC91698C7C100B2A6AE /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				AB72838E1699EF64004473A6 /* JMConstants.h */,
 				AB3B426B1694B64B00A78685 /* OpenCVSquares-Prefix.pch */,
 				AB3B42651694B64B00A78685 /* OpenCVSquares-Info.plist */,
+				AB442EE4169B8FC80046799F /* OpenCVSquaresXIB-Info.plist */,
 				AB3B42661694B64B00A78685 /* InfoPlist.strings */,
 				AB3B42691694B64B00A78685 /* main.m */,
 				AB3B426F1694B64B00A78685 /* Default.png */,
@@ -367,6 +370,7 @@
 				AB3B42AD1694BE0B00A78685 /* testimage2.jpg in Resources */,
 				AB3B42AE1694BE0B00A78685 /* testimage3.jpg in Resources */,
 				AB2E7DDA169B029600FCF538 /* testimage3.png in Resources */,
+				AB442EE5169B8FC80046799F /* OpenCVSquaresXIB-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +615,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CVOpenTemplate/OpenCVSquares-Prefix.pch";
-				INFOPLIST_FILE = "OpenCVSquares copy-Info.plist";
+				INFOPLIST_FILE = "CVOpenTemplate/OpenCVSquaresXIB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DFORMAT_XIB";
 				PRODUCT_NAME = OpenCVSquaresXIB;
@@ -630,7 +634,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CVOpenTemplate/OpenCVSquares-Prefix.pch";
-				INFOPLIST_FILE = "OpenCVSquares copy-Info.plist";
+				INFOPLIST_FILE = "CVOpenTemplate/OpenCVSquaresXIB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = (
 					"-DFORMAT_XIB",
