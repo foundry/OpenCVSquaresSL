@@ -15,6 +15,7 @@
 #import "CVWrapper.h"
 #import "CVSquares.h"
 #import "UIImage+OpenCV.h"
+#import "CVImagePickerSegmentedControl.h"
 
     //remove 'magic numbers' from original C++ source so we can manipulate them from obj-C
 #define TOLERANCE 0.3
@@ -25,6 +26,7 @@
 
 + (UIImage*) detectedSquaresInImage:(UIImage*) image
 {
+ 
         //if we call this method with no parameters,
         //we use the defaults from the original c++ project
     return [[self class] detectedSquaresInImage:image
@@ -41,14 +43,16 @@
 {
         //NSLog (@"detectedSquaresInImage");
     UIImage* result = nil;
+    if (image) {
     cv::Mat matImage = [image CVMat];
     
     
-    matImage = CVSquares::detectedSquaresInImage (matImage, tolerance, threshold, levels);
+    cv::Mat matImage2 = CVSquares::detectedSquaresInImage (matImage, tolerance, threshold, levels);
        
     
-    result = [UIImage imageWithCVMat:matImage];
+    result = [UIImage imageWithCVMat:matImage2];
         //NSLog (@"detectedSquaresInImage result");
+    }
     
     return result;
     

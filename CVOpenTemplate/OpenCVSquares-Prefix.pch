@@ -8,11 +8,29 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
-#ifdef __cplusplus
+#ifdef VERSION_SL
+#define XCODE_VERSION @"4.2 (Snow_Leopard)"
+#else
+#define XCODE_VERSION @"Lion"
+#endif
+
+
+#if (defined (VERSION_SL) && defined (__cplusplus))
+#warning <openCV/opencv2/opencv.hpp> in use
+#define OPENCV_VERSION @"<openCV/opencv2/opencv.hpp>"
+#import <openCV/opencv2/opencv.hpp>
+#elif defined (__cplusplus)
+#warning <opencv2/opencv.hpp> in use
+#define OPENCV_VERSION @"<opencv2/opencv.hpp>"
+    //#import <openCV/opencv2/opencv.hpp>
+
 #import <opencv2/opencv.hpp>
 #endif
+
+
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "JMConstants.h"
 #endif

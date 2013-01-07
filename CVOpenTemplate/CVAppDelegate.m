@@ -13,11 +13,25 @@
 //
 
 #import "CVAppDelegate.h"
-
+#import "CVViewController.h"
 @implementation CVAppDelegate
+
+@synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    
+#ifdef FORMAT_XIB
+    NSLog (@"XIB VERSION");
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    CVViewController *myViewController = [ [CVViewController alloc] initWithNibName:@"CVViewController_iPhone" bundle:nil ];
+    self.window.rootViewController = myViewController;
+    [self.window makeKeyAndVisible];
+#else
+    NSLog (@"STORYBOARD VERSION");
+#endif
     return YES;
 }
 							

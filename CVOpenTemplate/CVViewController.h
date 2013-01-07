@@ -13,34 +13,40 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CVImagePickerSegmentedControl.h"
 
 @interface CVViewController : UIViewController
+<UINavigationControllerDelegate,
+UIScrollViewDelegate,
+UIImagePickerControllerDelegate,
+CVImagePickerSegmentedControlDelegate,
+UIPopoverControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+    //views
+@property (weak, nonatomic) IBOutlet UIScrollView* scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView* imageView;
 @property (weak, nonatomic) IBOutlet UIView *controlsView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* spinner;
 
 
+
+    //sliders
 @property (assign) CGFloat tolerance;
-@property (assign) int levels;
-@property (assign) int threshold;
-
-- (IBAction)imageTapped:(id)sender;
-
-
 
 @property (weak, nonatomic) IBOutlet UISlider *toleranceSlider;
 @property (weak, nonatomic) IBOutlet UILabel *toleranceLabel;
 - (IBAction)toleranceChanged:(id)sender;
 - (IBAction)toleranceTouchDragInside:(id)sender;
 
+@property (assign) int levels;
 
 @property (weak, nonatomic) IBOutlet UISlider *levelsSlider;
 @property (weak, nonatomic) IBOutlet UILabel *levelsLabel;
 - (IBAction)levelsChanged:(id)sender;
 - (IBAction)levelsTouchDragInside:(id)sender;
+
+@property (assign) int threshold;
 
 @property (weak, nonatomic) IBOutlet UISlider *thresholdSlider;
 @property (weak, nonatomic) IBOutlet UILabel *thresholdLabel;
