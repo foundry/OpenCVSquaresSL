@@ -14,7 +14,8 @@
 
 #import "CVViewController.h"
 #import "CVWrapper.h"
-    //#import "CVImagePickerControl.h"
+
+#define IMAGE_NAME @"testimage3.jpg"
 
 @interface CVViewController () 
 @property (nonatomic, strong) UIImage* image;
@@ -210,7 +211,7 @@
                                             action:@selector(imageTapped:)];
     [self.view addGestureRecognizer:tapGR];
     
-    self.image = [UIImage imageNamed:@"testimage3.jpg"];
+    self.image = [UIImage imageNamed:IMAGE_NAME];
 }
 
 
